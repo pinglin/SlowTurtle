@@ -1,0 +1,165 @@
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Nav bar */
+.navbar .brand {
+  float: right;
+  color: #005580;  
+}
+
+.navbar .brand:hover, .navbar .brand:focus {
+  text-decoration: none;
+  color: #660000;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffffff !important;
+  background-image: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;  
+}
+
+.navbar .nav-pills > li > a {
+  color: #005580;
+}
+
+.navbar .nav-pills > li > a:hover {
+  background-color: #ffffff;
+  color: #660000;
+}
+
+.navbar .nav-pills .active > a {
+  color: #555555;
+  outline: 0; /* For Firefox */
+}
+
+.navbar .nav-pills .active > a:hover {
+  color: #555555;
+  outline: 0; /* For Firefox */
+}
+
+/* Side bar */
+.nav > li > a {
+  text-decoration: none;
+  color: #005580;
+  background-color: #ffffff;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+  text-decoration: none;
+  color: #660000;
+  background-color: #ffffff;
+}
+
+.nav-lists>.active>a, .nav-lists>.active>a:hover, .nav-lists>.active>a:focus { 
+  color: #005580;
+  background-color: #ffffff;
+  text-decoration: underline; 
+}
+
+/* Wrapper for dynamic content */
+#wrap > .container {
+  padding-top: 100px;
+}
+.container .credit {
+  padding-top: 80px;
+  margin: 20px 0;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -40px;
+}
+
+/* Set the fixed height of the footer here */
+#push {
+  height: 50px;
+  padding-bottom: 10px;
+}
+
+/* Footer */
+#footer {
+  height: 30px;
+  padding-top: 10px;
+  background-color: #e5e5e5;
+  color: #005580;
+}
+
+.footer > a{
+  color: #005580;
+}
+
+.footer > a:hover, .footer > a:focus{
+  color: #660000;
+}
+
+/* Publication page */
+.paper {
+
+  margin-top: 20px;
+
+}
+
+.paper-img {
+
+  margin-top: 5px;
+  background-position: center center;
+  width: 120px;
+  height: 100px;
+
+}
+
+.authorship {
+  font-size: 12pt;
+  color: #555555;
+}
+
+/* PDF thumbnail */
+.pdf-thumbnail {
+  border-radius: 5px;
+  border: 1px solid #555555;
+  margin-top: 20px;
+  padding: 5px 0 5px 0;
+  width: 50px;
+  height: 60px;
+}
+
+/* Youtube thumbnail */
+.youtube-thumbnail {
+  border-radius: 5px;
+  border: 1px solid #555555;
+  margin-top: 20px;
+  padding: 5px 0 5px 0;  
+  width: 80px;
+  height: 60px;
+}
+
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* For Firefox */
+@media (max-width: 767px) {
+  .nav.nav-pills.nav-stacked.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+}
