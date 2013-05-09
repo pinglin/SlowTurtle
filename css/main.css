@@ -1,7 +1,37 @@
 html,
-body {
+body {  
   height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
+  /* The html and body elements cannot have any padding or margin. */  
+}
+
+body {
+  overflow-y: scroll;
+}
+
+a {
+  color: #005580;
+}
+
+a:hover {
+  background-color: #ffffff;
+  color: #660000;
+}
+
+section {  
+  padding-top: 80px;
+}
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+}
+
+#nav-side {
+
+  padding-top: 20px;
+
 }
 
 /* Nav bar */
@@ -45,32 +75,44 @@ body {
   outline: 0; /* For Firefox */
 }
 
+.brand > a:hover {
+  text-decoration: none;
+}
+
 /* Side bar */
 .nav > li > a {
   text-decoration: none;
   color: #005580;
   background-color: #ffffff;
+  outline: 0; /* For Firefox */
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
   text-decoration: none;
   color: #660000;
   background-color: #ffffff;
+  outline: 0; /* For Firefox */
 }
 
 .nav-lists>.active>a, .nav-lists>.active>a:hover, .nav-lists>.active>a:focus { 
   color: #005580;
   background-color: #ffffff;
-  text-decoration: underline; 
+  text-decoration: underline;
+  outline: 0; /* For Firefox */
+}
+
+.contact {
+  position: fixed;
+  margin-bottom: 80px;
 }
 
 /* Wrapper for dynamic content */
 #wrap > .container {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 .container .credit {
-  padding-top: 80px;
-  margin: 20px 0;
+/*  padding-top: 80px;
+  margin: 20px 0;*/
 }
 
 /* Wrapper for page content to push down footer */
@@ -91,7 +133,7 @@ body {
 #footer {
   height: 30px;
   padding-top: 10px;
-  background-color: #e5e5e5;
+  background-color: #f5f5f5;
   color: #005580;
 }
 
@@ -102,6 +144,8 @@ body {
 .footer > a:hover, .footer > a:focus{
   color: #660000;
 }
+
+/* Profile page */
 
 /* Publication page */
 .paper {
@@ -114,8 +158,7 @@ body {
 
   margin-top: 5px;
   background-position: center center;
-  width: 120px;
-  height: 100px;
+  width: 120px;  
 
 }
 
@@ -146,20 +189,22 @@ body {
 
 
 /* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
+@media (max-width: 979px) {
+  .contact {
+    position: relative;
+  }
+
+  /* For Firefox */
+  .nav.nav-pills.nav-stacked.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
   #footer {
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
-  }
-}
-
-/* For Firefox */
-@media (max-width: 767px) {
-  .nav.nav-pills.nav-stacked.affix {
-    position: static;
-    width: auto;
-    top: 0;
   }
 }
