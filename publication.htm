@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<div id="content">
+<div class="content">
 	<div class="row">
 		<div id="nav-side" class="span2">
 			<!--Sidebar content-->
@@ -15,23 +15,59 @@
 				<div class="row">					
 					<h2>2013</h2>
 					<div class="span8">
-						<blockquote cite="10.1016/j.compmedimag.2013.01.001">
-							<p class="lead">Modeling of the bony pelvis from MRI using a multi-atlas AE-SDM for registration and tracking in image-guided robotic prostatectomy</p>
-							<h5>Journal of Computerized Medical Imaging and Graphics (CMIG), 37(2): 183-194, March 2013</h5>
-							<p class="authorship">Qinquan Gao, Ping-Lin Chang, Daniel Rueckert, S. Mohammed Ali, Daniel Cohen, Philip Pratt, Erik Mayer, Guang-Zhong Yang, Ara Darzi and Philip "Eddie" Edward</p>
-
+						<blockquote cite="10.1016/j.compmedimag.2013.01.001">					
+							<h4>Real-Time Dense Stereo Reconstruction Using Convex Optimisation with a Cost-Volume for Image-Guided Robotic Surgery</h4>
+							<p class="authorship"><u>Ping-Lin Chang</u>, Danail Stoyanov, Andrew J. Davison and Philip "Eddie" Edward</p>
+							<h6>Accepted by the 16th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI) 2013</h6>
+							<!-- Abstract -->							
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" href="#collapse2013_2">Abstract</a>
+								</div>
+								<div id="collapse2013_2" class="accordion-body collapse">
+									<div class="accordion-inner">
+										Reconstructing the depth of stereo-endoscopic scenes is an important step in providing accurate guidance in robotic-assisted minimally invasive surgery. Stereo reconstruction has been studied for decades but remains a challenge in endoscopic imaging. Current approaches can easily fail to reconstruct an accurate and smooth 3D model due to textureless tissue appearance in the real surgical scene and occlusion by instruments. To tackle these problems, we propose a dense stereo reconstruction algorithm using convex optimisation with a cost-volume to efficiently and effectively reconstruct a smooth model while maintaining depth discontinuity. The proposed approach has been validated by quantitative evaluation using simulation and real phantom data with known ground truth. We also report qualitative results from real surgical images. The algorithm outperforms state of the art methods and can be easily parallelised to run in real-time on recent graphics hardware.
+									</div>
+								</div>
+							</div>						
+						
 							<!-- online materials -->
-							<a href="pdf/2013_CMIG.pdf" data-toggle="tooltip" data-placement="right" title="" data-original-title="PDF">
-								<img src="img/publication/2013_CMIG_pdf.png" class="pdf-thumbnail">
-							</a>
-							<a href="http://youtu.be/w0iYfNo58MY" data-toggle="tooltip" data-placement="right" title="" data-original-title="Phantom AR video on Youtube">
-								<img src="http://img.youtube.com/vi/w0iYfNo58MY/1.jpg" class="youtube-thumbnail">
-							</a>
-							<a href="http://youtu.be/N4vCPWSMISs" data-toggle="tooltip" data-placement="right" title="" data-original-title="Real surgical AR video on Youtube">
-								<img src="http://img.youtube.com/vi/N4vCPWSMISs/1.jpg" class="youtube-thumbnail">
-							</a>
+							[<a href="pdf/2013_MICCAI.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="PDF file coming soon">pdf</a>]
+							
+							[<a href="http://youtu.be/jqfsv-G7of0" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Demo video on Youtube">video</a>]
+
+							[<a class="dummy-link" href="" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Source code coming soon">code</a>]
 						</blockquote>
-					</div>		
+					</div>
+					<div class="span2">
+						<img src="img/publication/2013_MICCAI_real.png" class="paper-img">
+						<img src="img/publication/2013_MICCAI_real_3d.png" class="paper-img">
+					</div>
+
+					<div class="span8">
+						<blockquote cite="10.1016/j.compmedimag.2013.01.001">					
+							<h4>Modeling of the bony pelvis from MRI using a multi-atlas AE-SDM for registration and tracking in image-guided robotic prostatectomy</h4>
+							<p class="authorship">Qinquan Gao, <u>Ping-Lin Chang</u>, Daniel Rueckert, S. Mohammed Ali, Daniel Cohen, Philip Pratt, Erik Mayer, Guang-Zhong Yang, Ara Darzi and Philip "Eddie" Edward</p>
+							<h6>Journal of Computerized Medical Imaging and Graphics (CMIG), 37(2): 183-194, March 2013</h6>
+							<!-- Abstract -->							
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" href="#collapse2013_1">Abstract</a>
+								</div>
+								<div id="collapse2013_1" class="accordion-body collapse">
+									<div class="accordion-inner">
+										A fundamental challenge in the development of image-guided surgical systems is alignment of the preoperative model to the operative view of the patient. This is achieved by finding corresponding structures in the preoperative scans and on the live surgical scene. In robot-assisted laparoscopic prostatectomy (RALP), the most readily visible structure is the bone of the pelvic rim. Magnetic resonance imaging (MRI) is the modality of choice for prostate cancer detection and staging, but extraction of bone from MRI is difficult and very time consuming to achieve manually. We present a robust and fully automated multi-atlas pipeline for bony pelvis segmentation from MRI, using a MRI appearance embedding statistical deformation model (AE-SDM). The statistical deformation model is built using the node positions of deformations obtained from hierarchical registrations of full pelvis CT images. For datasets with corresponding CT and MRI images, we can transform the MRI into CT SDM space. MRI appearance can then be used to improve the combined MRI/CT atlas to MRI registration using SDM constraints. We can use this model to segment the bony pelvis in a new MRI image where there is no CT available. A multi-atlas segmentation algorithm is introduced which incorporates MRI AE-SDMs guidance. We evaluated the method on 19 subjects with corresponding MRI and manually segmented CT datasets by performing a leave-one-out study. Several metrics are used to quantify the overlap between the automatic and manual segmentations. Compared to the manual gold standard segmentations, our robust segmentation method produced an average surface distance 1.24±0.27mm, which outperforms state-of-the-art algorithms for MRI bony pelvis segmentation. We also show that the resulting surface can be tracked in the endoscopic view in near real time using dense visual tracking methods. Results are presented on a simulation and a real clinical RALP case. Tracking is accurate to 0.13mm over 700 frames compared to a manually segmented surface. Our method provides a realistic and robust framework for intraoperative alignment of a bony pelvis model from diagnostic quality MRI images to the endoscopic view.
+									</div>
+								</div>
+							</div>						
+						
+							<!-- online materials -->
+							[<a href="pdf/2013_CMIG.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="PDF file">pdf</a>]
+							
+							[<a href="http://youtu.be/w0iYfNo58MY" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Phantom AR video on Youtube">video1</a>]
+							[<a href="http://youtu.be/N4vCPWSMISs" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Real surgical AR video on Youtube">video2</a>]
+						</blockquote>
+					</div>
 					<div class="span2">
 						<img src="img/publication/2013_CMIG_seg.png" class="paper-img">
 						<img src="img/publication/2013_CMIG_tracking.png" class="paper-img">
@@ -45,14 +81,24 @@
 					<h2>2012</h2>
 					<div class="span8">
 						<blockquote cite="10.1007/978-3-642-32630-1_1">
-							<p class="lead">2D/3D registration of a preoperative model with endoscopic video using colour-consistency</p>
-							<h5>Proceeding of the Augmented Environments for Computer-Assisted Interventions (AE-CAI) in Conjunction with MICCAI, pages 1-12, October 2012</h5>
-							<p class="authorship">Ping-Lin Chang, Dongbin Chen, Daniel Cohen and Philip "Eddie" Edwards</p>
+							<h4>2D/3D registration of a preoperative model with endoscopic video using colour-consistency</h4>
+							<h6>Proceedings of the Augmented Environments for Computer-Assisted Interventions (AE-CAI) in Conjunction with MICCAI, pages 1-12, October 2012</h6>
+							<p class="authorship"><u>Ping-Lin Chang</u>, Dongbin Chen, Daniel Cohen and Philip "Eddie" Edwards</p>
 
+							<!-- Abstract -->							
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" href="#collapse2012_1">Abstract</a>
+								</div>
+								<div id="collapse2012_1" class="accordion-body collapse">
+									<div class="accordion-inner">
+										Image-guided surgery needs an effective and efficient registration between 2D video images of the surgical scene and a preoperative model of a patient from 3D MRI or CT scans. Such an alignment process is difficult due to the lack of robustly trackable features on the operative surface as well as tissue deformation and specularity. In this paper, we propose a novel approach to perform the registration using PTAM camera tracking and colour-consistency. PTAM provides a set of video images with the corresponding camera positions. Registration of the 3D model to the video images can then be achieved by maximization of colour-consistency between all 2D pixels corresponding to a given 3D surface point. An improved algorithm for calculation of visible surface points is provided. It is hoped that PTAM camera tracking using a reduced set of points can be combined with colour-consistency to provide a robust registration. A ground truth simulation test bed has been developed for validating the proposed algorithm and empirical studies have shown that the approach is feasible, with ground truth simulation data providing a capture range of ±9mm/° with a TRE less than 2mm. Our intended application is robot-assisted laparoscopic prostatectomy.
+									</div>
+								</div>
+							</div>						
+						
 							<!-- online materials -->
-							<a href="pdf/2012_AECAI.pdf" data-toggle="tooltip" data-placement="right" title="" data-original-title="PDF">
-								<img src="img/publication/2012_AECAI_pdf.png" class="pdf-thumbnail">
-							</a>							
+							[<a href="pdf/2012_AECAI.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="PDF file">pdf</a>]
 						</blockquote>
 					</div>		
 					<div class="span2">
@@ -60,37 +106,54 @@
 						<img src="img/publication/2012_AECAI_pose.png" class="paper-img">
 					</div>
 
-					<div class="span8 paper">						
+					<div class="span8">						
 						<blockquote cite="10.1007/s10916-011-9752-8">
-							<p class="lead">Identifying regions of interest in medical images using self-organizing maps</p>
-							<h5>Journal of Medical Systems, 36(5):2761-2768, October 2012</h5>
-							<p class="authorship">Wei-Guang Teng and Ping-Lin Chang</p>
+							<h4>Identifying regions of interest in medical images using self-organizing maps</h4>
+							<h6>Journal of Medical Systems, 36(5):2761-2768, October 2012</h6>
+							<p class="authorship">Wei-Guang Teng and <u>Ping-Lin Chang</u></p>
+
+							<!-- Abstract -->							
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" href="#collapse2012_2">Abstract</a>
+								</div>
+								<div id="collapse2012_2" class="accordion-body collapse">
+									<div class="accordion-inner">
+										Advances in data acquisition, processing and visualization techniques have had a tremendous impact on medical imaging in recent years. However, the interpretation of medical images is still almost always performed by radiologists. Developments in artificial intelligence and image processing have shown the increasingly great potential of computer-aided diagnosis (CAD). Nevertheless, it has remained challenging to develop a general approach to process various commonly used types of medical images (e.g., X-ray, MRI, and ultrasound images). To facilitate diagnosis, we recommend the use of image segmentation to discover regions of interest (ROI) using self-organizing maps (SOM). We devise a two-stage SOM approach that can be used to precisely identify the dominant colors of a medical image and then segment it into several small regions. In addition, by appropriately conducting the recursive merging steps to merge smaller regions into larger ones, radiologists can usually identify one or more ROIs within a medical image.
+									</div>
+								</div>
+							</div>			
 
 							<!-- online materials -->
-							<a href="pdf/2012_JMS.pdf" data-toggle="tooltip" data-placement="right" title="" data-original-title="PDF">
-								<img src="img/publication/2012_JMS_pdf.png" class="pdf-thumbnail">
-							</a>							
+							[<a href="pdf/2012_JMS.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="PDF file">pdf</a>]
 						</blockquote>
 					</div>		
-					<div class="span2 paper-img">
+					<div class="span2">
 						<img src="img/publication/2012_JMS_som.png" class="paper-img">
 						<img src="img/publication/2012_JMS_seg.png" class="paper-img">
 					</div>					
 
-
-					<div class="span8 paper">						
+					<div class="span8">						
 						<blockquote cite="10.1049/iet-ipr.2011.0029">
-							<p class="lead">Adaptive and efficient colour quantisation based on a growing self-organising map</p>
-							<h5>IET Image Processing, 6(5):463-472, July 2012</h5>
-							<p class="authorship">Wei-Guang Teng, Ping-Lin Chang and Cheng-Ta Yang</p>
+							<h4>Adaptive and efficient colour quantisation based on a growing self-organising map</h4>
+							<h6>IET Image Processing, 6(5):463-472, July 2012</h6>
+							<p class="authorship">Wei-Guang Teng, <u>Ping-Lin Chang</u> and Cheng-Ta Yang</p>
+
+							<!-- Abstract -->							
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse" href="#collapse2012_3">Abstract</a>
+								</div>
+								<div id="collapse2012_3" class="accordion-body collapse">
+									<div class="accordion-inner">
+										Studies on colour quantisation have indicated that its applications range from the relaxation of displaying hardware constraints in early years to a modern usage of facilitating content-based image retrieval tasks. Among many alternatives, approaches based on neural network models are generally accepted to be able to produce quality results in colour quantisation. However, these approaches using n quantised neurons require O(n) for a full search strategy, which is inefficient when n becomes large. In view of this, we propose to incorporate a growing quadtree structure into a self-organising map (GQSOM) which reaches a search time O(logn). Specifically, the strategy of inheriting from parent neurons hierarchically facilitates a much more efficient and flexible learning process. Both theoretical and empirical studies have shown that our approach is adaptive in determining an appropriate number of quantised colours, and the performance is significantly improved without compromise of the quantisation quality.
+									</div>
+								</div>
+							</div>		
 
 							<!-- online materials -->
-							<a href="pdf/2012_IET.pdf" data-toggle="tooltip" data-placement="right" title="" data-original-title="PDF">
-								<img src="img/publication/2012_IET_pdf.png" class="pdf-thumbnail">
-							</a>
-							<a href="pdf/2009_PCM.pdf" data-toggle="tooltip" data-placement="right" title="" data-original-title="PDF of 2009 PCM colour version">
-								<img src="img/publication/2009_PCM_pdf.png" class="pdf-thumbnail">
-							</a>
+							[<a href="pdf/2012_IET.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="PDF file">pdf</a>]
+							[<a href="pdf/2009_PCM.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="PDF file of 2009 PCM colour version">pdf</a>]
 						</blockquote>
 					</div>		
 					<div class="span2">

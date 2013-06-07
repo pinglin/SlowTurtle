@@ -1,11 +1,11 @@
-html,
-body {  
+html {  
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */  
 }
 
 body {
   overflow-y: scroll;
+  height: 100%; 
 }
 
 a {
@@ -148,18 +148,9 @@ section {
 /* Profile page */
 
 /* Publication page */
-.paper {
-
-  margin-top: 20px;
-
-}
-
 .paper-img {
-
-  margin-top: 5px;
   background-position: center center;
-  width: 120px;  
-
+  width: 80px;  
 }
 
 .authorship {
@@ -169,22 +160,34 @@ section {
 
 /* PDF thumbnail */
 .pdf-thumbnail {
-  border-radius: 5px;
+  border-radius: 2px;
   border: 1px solid #555555;
   margin-top: 20px;
   padding: 5px 0 5px 0;
-  width: 50px;
-  height: 60px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Youtube thumbnail */
 .youtube-thumbnail {
-  border-radius: 5px;
+  border-radius: 2px;
   border: 1px solid #555555;
   margin-top: 20px;
   padding: 5px 0 5px 0;  
-  width: 80px;
-  height: 60px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Abstract collapse */
+.accordion-heading .accordion-toggle {
+  padding: 0px 0px;
+}
+
+.accordion-group {
+  border-width: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align:justify;
 }
 
 

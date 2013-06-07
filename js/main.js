@@ -4,12 +4,14 @@ $(document).ready(function() {
 	$.ajaxSetup ({cache: false});
 
 	/* Default front page */
-	$('#dyn-content').load('profile.htm #content', function() {
-		$(this).fadeIn('slow');
+	$('#dyn-content').load('home.htm .content', function() {
+		$(this).fadeIn('fast');
 		Init();
 
-		$('body').scrollspy('refresh');
-	}).hide();
+		/* spy#nav-side area only */		
+		$('body').scrollspy({ target: '#nav-side' }); 
+
+	}).hide();	
 
 	/* Click nav buttons and pages are changed correspondingly */
 	$('.nav-page-btn').click(function(event) {
@@ -28,25 +30,25 @@ $(document).ready(function() {
 		/* Ajax for loding pages */
 		var page = $(this).attr('id').toString();
 		if($(this).hasClass('research'))
-			var load_content = 'research/' + page + '.htm #content';
+			var load_content = 'research/' + page + '.htm .content';
 		else
-			var load_content = $(this).attr('id').toString() + '.htm #content';
+			var load_content = $(this).attr('id').toString() + '.htm .content';
 
 		$('#dyn-content').fadeOut('fast', function(){
 			$(this).load(load_content, function(){ 			
 				$(this).fadeIn('fast');
 				Init();
 
+				/* spy#nav-side area only */
 				$('body').scrollspy('refresh');
+				$('body').scrollspy({ target: '#nav-side' });
+
 			});			
-		});	
+		});
 
 	});
 
 });
-
-var response_div_top = '<div class="response-top-tag" style="padding-top:20px; text-align: right;"><a href="">Top</a></div>';
-var contact_gap = 20;
 
 function Init()
 {
@@ -67,7 +69,7 @@ function Init()
 	scrollHeight = $(document).height();
 
 	$('html, body').animate({
-		scrollTop: $( $('#nav-side li.active a').attr('href') ).offset().top
+		scrollTop: $('#nav-side').offset().top 
 	}, 500);
 
 	$('#nav-side li a').click(function(){
@@ -75,7 +77,7 @@ function Init()
 			scrollTop: $( $.attr(this, 'href') ).offset().top
 		}, 500);
 		return false;
-	});
+	});	
 
 	if($(window).width() <= 979) // response mode
 	{		
@@ -94,6 +96,9 @@ function Init()
 		$('section .response-top-tag').remove();
 	}	
 }
+
+var response_div_top = '<div class="response-top-tag" style="padding-top:20px; text-align: right;"><a href="">Top</a></div>';
+var contact_gap = 20;
 
 /* When window is resized, dynamic components have to be adjusted accordingly */
 $(window).resize(function() {
