@@ -24,7 +24,7 @@ $(document).ready(function() {
 			return;
 
 		/* Switch navbar active status */
-		$('.nav-page-btn, li.active').removeClass('active');
+		$('.nav-page-btn.active').removeClass('active');
 		$(this).addClass('active');
 
 		/* Ajax for loding pages */
